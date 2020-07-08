@@ -1,0 +1,6 @@
+water is the most important molecule in the world . [SEP] water
+mana ##v is the cool ##est person in the world . [SEP] mana ##v
+water cause the earth to er ##ode . [SEP] water
+jim is the reason that bill died . [SEP] jim
+i love chocolate . [SEP] chocolate
+due to the event , we are happy ! [SEP] the event
