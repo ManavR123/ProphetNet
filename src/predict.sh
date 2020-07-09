@@ -25,8 +25,8 @@ NBEST=5
 TOP=0.95
 LENPEN=1.5
 CHECK_POINT=qg/finetune_qg_checkpoints/prophetnet_large_16G_qg_model.pt
-OUTPUT_FILE=qg/${1}/output.txt
-TEMP_FILE=qg/${1}/score.txt
+OUTPUT_FILE=qg/${1}/${1}_output.txt
+TEMP_FILE=qg/${1}/${1}_score.txt
 
 fairseq-generate $DEST_DIR --path $CHECK_POINT --user-dir prophetnet --task translation_prophetnet --batch-size 1 --gen-subset train --sampling --sampling-topp $TOP --nbest $NBEST --num-workers 4 --no-repeat-ngram-size 3 --lenpen $LENPEN 2>&1 > $TEMP_FILE
 grep ^H $TEMP_FILE | cut -c 3- | sort -n | cut -f3- | sed "s/ ##//g" > $OUTPUT_FILE
