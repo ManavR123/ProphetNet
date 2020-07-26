@@ -428,3 +428,10 @@ class NgramMultiheadAttention(nn.Module):
 
     def get_incremental_state(self, incremental_state, key):
         return incremental_state
+    
+    def set_incremental_state(
+        self, incremental_state, key, value
+    ):
+        """Helper for setting incremental state for an nn.Module."""
+        if incremental_state is not None:
+            incremental_state[key] = value
