@@ -427,8 +427,4 @@ class NgramMultiheadAttention(nn.Module):
         )
 
     def get_incremental_state(self, incremental_state, key):
-        return utils.get_incremental_state(
-            self,
-            incremental_state,
-            key,
-        ) or {}
+        return incremental_state
