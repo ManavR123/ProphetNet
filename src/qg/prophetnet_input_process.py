@@ -1,8 +1,8 @@
 import argparse
 import pandas as pd
 
-def process(inputfile):
-    df = pd.read_csv(inputfile)
+def process(inputdir):
+    df = pd.read_csv(f"{inputdir}.csv")
     paras = []
     qs = []
     for index, row in df.iterrows():
@@ -15,9 +15,8 @@ def process(inputfile):
         paras.append(row['Text'] + '[SEP] ' + effect)
         qs.append('nothing?')
 
-    filename = ''.join(inputfile.split(".")[:-1])
-    f1 = open(f"{filename}.txt", "w", encoding="utf-8")
-    f2 = open(f"{filename}_q.txt", "w", encoding="utf-8")
+    f1 = open(f"{inputdir}.txt", "w", encoding="utf-8")
+    f2 = open(f"{inputdir}_q.txt", "w", encoding="utf-8")
     f1.write('\n'.join(paras))
     f2.write('\n'.join(qs))
     f1.close()
