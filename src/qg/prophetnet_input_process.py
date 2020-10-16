@@ -11,10 +11,10 @@ def process(inputdir):
         cause = row['Cause']
         effect = row['Effect']
 
-        paras.append(row['Text'] + '[SEP] ' + cause)
+        paras.append(row['Text'] + ' [SEP] ' + cause)
         qs.append('nothing?')
 
-        paras.append(row['Text'] + '[SEP] ' + effect)
+        paras.append(row['Text'] + ' [SEP] ' + effect)
         qs.append('nothing?')
 
     f1 = open(os.path.join(inputdir, f"{inputdir}.txt"), "w", encoding="utf-8")
