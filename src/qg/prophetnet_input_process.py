@@ -4,7 +4,7 @@ import os
 import pandas as pd
 
 def process(inputdir):
-    df = pd.read_csv(os.join(inputdir, f"{inputdir}.csv"))
+    df = pd.read_csv(os.path.join(inputdir, f"{inputdir}.csv"))
     paras = []
     qs = []
     for index, row in df.iterrows():
@@ -17,8 +17,8 @@ def process(inputdir):
         paras.append(row['Text'] + '[SEP] ' + effect)
         qs.append('nothing?')
 
-    f1 = open(os.join(inputdir, f"{inputdir}.txt"), "w", encoding="utf-8")
-    f2 = open(os.join(inputdir, f"{inputdir}_q.txt"), "w", encoding="utf-8")
+    f1 = open(os.path.join(inputdir, f"{inputdir}.txt"), "w", encoding="utf-8")
+    f2 = open(os.path.join(inputdir, f"{inputdir}_q.txt"), "w", encoding="utf-8")
     f1.write('\n'.join(paras))
     f2.write('\n'.join(qs))
     f1.close()
