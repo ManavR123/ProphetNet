@@ -42,8 +42,8 @@ def process_output(dirname):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Processing script for causal question experiments')
     parser.add_argument('--dirname', type=str, help='Name of directory to process')
-    parser.add_argument('--input', type=bool, help='Process input?')
-    parser.add_argument('--output', type=bool, help='Process output?')
+    parser.add_argument('--input', action="store_true", help='Process input?')
+    parser.add_argument('--output', action="store_true", help='Process output?')
     args = parser.parse_args()
     if args.input:
         process_input(args.dirname)
