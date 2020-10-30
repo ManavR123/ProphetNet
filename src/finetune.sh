@@ -16,6 +16,7 @@ fairseq-preprocess \
 --task translation_prophetnet \
 --source-lang src --target-lang tgt \
 --trainpref qg/${1}/${1} \
+--validpref qg/${1}/${1} \
 --destdir $DEST_DIR --srcdict vocab.txt --tgtdict vocab.txt \
 --workers 20
 
