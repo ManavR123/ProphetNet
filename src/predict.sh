@@ -21,7 +21,7 @@ fairseq-preprocess \
 
 echo "Generating questions"
 BEAM=5
-NBEST=5
+NBEST=1
 TOP=0.90
 LENPEN=1.5
 CHECK_POINT=qg/finetune_qg_checkpoints/prophetnet_large_16G_qg_model.pt
@@ -29,7 +29,7 @@ OUTPUT_FILE=qg/${1}/${1}_output.txt
 TEMP_FILE=qg/${1}/${1}_score.txt
 TENSORBOARD_DIR=qg/${1}/tensorboard/
 
-fairseq-generate --log-interval 1 $DEST_DIR --path $CHECK_POINT --user-dir prophetnet --task translation_prophetnet --batch-size 1 --gen-subset train --sampling --nbest $NBEST --num-workers 4 --no-repeat-ngram-size 3 --tensorboard-logdir $TENSORBOARD_DIR --lenpen $LENPEN 2>&1 > $TEMP_FILE
+fairseq-generate --log-interval 1 $DEST_DIR --path $CHECK_POINT --user-dir prophetnet --task translation_prophetnet --batch-size 32 --gen-subset train --beam $BEAM --num-workers 4 --no-repeat-ngram-size 3  --lenpen $LENPEN 2>&1 > $TEMP_FILE
 grep ^H $TEMP_FILE | cut -c 3- | sort -n | cut -f3- | sed "s/ ##//g" > $OUTPUT_FILE
 
 echo "Complete"
