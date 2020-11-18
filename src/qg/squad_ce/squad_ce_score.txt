@@ -7565,5 +7565,5 @@ S-1279	major amend ##ing treaties were signed to complete the development of a s
 T-1279	nothing ?
 H-1279	-0.2035292237997055	what was the purpose of the amend ##ing treaties ?
 P-1279	-0.4529 -2.7859 -0.5239 -0.5580 -0.1188 -0.8318 -1.1375 -0.0449 -0.1882 -0.6967 -0.0867
-| Translated 1890 sentences (25488 tokens) in 156.4s (12.08 sentences/s, 162.95 tokens/s)
+| Translated 1890 sentences (25488 tokens) in 156.5s (12.08 sentences/s, 162.91 tokens/s)
 | Generate train with beam=5: BLEU4 = 0.00, 7.9/0.0/0.0/0.0 (BP=1.000, ratio=6.243, syslen=23598, reflen=3780)
