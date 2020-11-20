@@ -24,7 +24,7 @@ echo "Begin Training"
 USER_DIR=./prophetnet
 ARCH=ngram_transformer_prophet_large
 CRITERION=ngram_language_loss
-SAVE_DIR=qg/finetune_qg_checkpoints
+SAVE_DIR=qg/finetune_qg_checkpoints/${1}
 TENSORBOARD_LOGDIR=qg/finetune_qg_tensorboard
 PRETRAINED_MODEL=qg/pretrained_checkpoints/prophetnet_large_16G_qg_model.pt
 
