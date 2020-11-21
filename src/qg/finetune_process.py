@@ -13,7 +13,7 @@ def create_input(dirname):
         paras.append(row["context"].replace("\n", "") + " [SEP] " + row["answer"])
         qs.append(row["question"])
 
-    train_paras, train_qs, valid_paras, valid_qs = train_test_split(
+    train_paras, valid_paras, train_qs, valid_qs = train_test_split(
         paras, qs, test_size=0.25, random_state=42
     )
 
