@@ -10,7 +10,7 @@ def create_input(dirname):
     paras = []
     qs = []
     for index, row in df.iterrows():
-        paras.append(row["context"].replace("\n", "") + " [SEP] " + row["answer"])
+        paras.append(row["context"].strip().replace("\n", "").replace("\r", "") + " [SEP] " + row["answer"])
         qs.append(row["question"])
 
     f1 = open(os.path.join(dirname, f"{dirname}.txt"), "w", encoding="utf-8")
