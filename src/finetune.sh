@@ -37,7 +37,7 @@ fairseq-train \
 --criterion $CRITERION --label-smoothing 0.1 \
 --update-freq 1  --max-tokens 1400 --max-sentences 1 \
 --load-from-pretrained-model $PRETRAINED_MODEL \
---ddp-backend=no_c10d --max-epoch 3 \
+--ddp-backend=no_c10d --max-epoch 3 --no-epoch-checkpoints \
 --max-source-positions 512 --max-target-positions 512 \
 --skip-invalid-size-inputs-valid-test \
 --save-dir $SAVE_DIR \
@@ -45,3 +45,4 @@ fairseq-train \
 $DEST_DIR
 
 echo "Complete"
+
