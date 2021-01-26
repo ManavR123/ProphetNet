@@ -1,6 +1,0 @@
-Water is the most important molecule in the world. [SEP] Water
-Manav is the coolest person in the world. [SEP] Manav
-Water cause the earth to erode. [SEP] Water
-Jim is the reason that Bill died. [SEP] Jim
-I love chocolate. [SEP] chocolate
-Due to the event, we are happy! [SEP] the event
