@@ -4,11 +4,9 @@ This branch of the repo contains all of the code used to produced the questions 
 
 ## QG Model Weights
 
-- [ProphetNet-large-16GB](https://drive.google.com/file/d/1PctDAca8517_weYUUBW96OjIPdolbQkd/view?usp=sharing) (pre-trained on 16GB corpus Wikipedia + BookCorpus with 64 epochs)
+- [ProphetNet-large-16GB](https://drive.google.com/file/d/1IiutfQp_Q5ggQErcdKd2byuAEnwzC09I/view) (fine-tuned on SQuAD with 5 epochs)
 
-- [ProphetNet-large-160GB](https://drive.google.com/file/d/1_nZcF-bBCQvBBcoPzA1nPZsz-Wo7hzEL/view?usp=sharing) (pre-trained on 160GB corpus Wikipedia + BookCorpus + RealNews + OpenWebText + Stories with 14 epochs)
-
-Store these in `src/qg/pretrained_checkpoints`.
+Store thix in `src/qg/pretrained_checkpoints`.
 
 ## How to Use
 
